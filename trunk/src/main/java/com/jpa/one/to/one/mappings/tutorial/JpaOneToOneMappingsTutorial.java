@@ -17,7 +17,14 @@ public class JpaOneToOneMappingsTutorial {
         ArtistService artistService = new ArtistService(em);
         WebsiteService websiteService = new WebsiteService(em);
 
+        System.out.println("--- Find website ---");
         Website website = websiteService.findWebsite(1);
+        System.out.println(String.format("Found website: %s", website));
+        System.out.println(String.format("Website artist: %s\n", website.getArtist()));
+
+        System.out.println("--- Find artist ---");
         Artist artist = artistService.findArtist(1);
+        System.out.println(String.format("Found artist: %s", artist));
+        System.out.println(String.format("Artist website: %s\n", artist.getWebsite()));
     }
 }
