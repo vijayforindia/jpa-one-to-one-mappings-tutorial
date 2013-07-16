@@ -14,8 +14,8 @@ public class JpaOneToOneMappingsTutorial {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("JpaOneToOneMappingsTutorial");
         EntityManager em = emf.createEntityManager();
-        ArtistService artistService = new ArtistService(em);
         WebsiteService websiteService = new WebsiteService(em);
+        ArtistService artistService = new ArtistService(em);
 
         System.out.println("--- Find website ---");
         Website website = websiteService.findWebsite(1);
