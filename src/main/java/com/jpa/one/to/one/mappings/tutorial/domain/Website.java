@@ -20,7 +20,7 @@ public class Website {
 
     @OneToOne
     @JoinColumn(name = "artist_id")
-    Artist artist;
+    private Artist artist;
 
     public Website() {
 
